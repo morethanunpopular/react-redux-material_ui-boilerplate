@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters';
 import { RaisedButton, List, ListItem, Divider } from 'material-ui';
 
 import InboxIcon from 'material-ui/svg-icons/content/inbox';
@@ -9,18 +8,6 @@ import ArchiveIcon from 'material-ui/svg-icons/content/archive';
 
 import palette from '../src/material_ui_raw_theme_file';
 
-
-const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
-  [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
-};
-
-const FILTER_ICONS = {
-  [SHOW_ALL]: <InboxIcon />,
-  [SHOW_ACTIVE]: <LoopIcon />,
-  [SHOW_COMPLETED]: <ArchiveIcon />
-};
 
 class Footer extends Component {
   getCountForFilter(filter) {
